@@ -1,25 +1,18 @@
-package com.miuru.formular1_manager.entity;
+package com.miuru.formular1_manager.model;
 
-import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
 
-@Entity
-@Table(name = "drivers")
+@Data
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class Driver {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "driver_id")
+@NoArgsConstructor
+public class DriverDTO {
     private Long driverId;
     private String forename;
     private String surname;
-    @Column(name = "driver_ref")
     private String driverRef;
     private Date dob;
     private String nationality;
